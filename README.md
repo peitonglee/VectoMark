@@ -1,5 +1,9 @@
 # VectoMark: Vectorized Road Markings Modeling for Visual SLAM in Public Transportation Environments
 ## 1. Experiments Videos (Click to jump)
+YouTube [Here (default)](https://www.youtube.com/watch?v=5Isd0tu_a6w)
+
+Bilibili [Here](https://www.bilibili.com/video/BV1471vBoEXb/?vd_source=a422a042a62840fe268651c9dbc91561)
+
 [![Experiments Videos](./pic/video_picture.png)](https://www.youtube.com/watch?v=5Isd0tu_a6w)
 
 ## 2. Getting Started
