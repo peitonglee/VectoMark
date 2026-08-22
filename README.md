@@ -1,4 +1,4 @@
-# VectoMark: Vectorized Road Markings Modeling for Visual SLAM in Public Transportation Environments
+# VectoMark: A Vectorized Road-Marking Reconstruction Method for Visual Mapping
 ## 1. Experiments Videos (Click to jump)
 YouTube [Here (default)](https://www.youtube.com/watch?v=5Isd0tu_a6w)
 
@@ -32,7 +32,7 @@ See [Here](./Path_Planning_Base_Lines/README.md)
 ## 7. 轨迹估计
 ![](./pic/traj.png "ATE comparision")
 
-## 8. The upcoming datasets (RoadMarkings_TJ)
+## 8. The upcoming datasets (RM_TJ)
 ![](./pic/datasets.png "datasets")
 
 you can download the datasets from the following links: [RoadMarkings\_TJ](https://pan.baidu.com/s/1X5R5Zsw1R28wVPfbhbnoVg?pwd=7C0D)
