@@ -222,7 +222,11 @@ mask) and one timestamp index file per stream.
 └── mask/         # e.g. 1341847980.722988.png
 ```
 
-Example: `-d /path/to/sequences/b2_s3`
+Example: `-d /path/to/sequences/xxx`
+
+You can download a demo dataset from
+
+URL: https://pan.baidu.com/s/1H4PRogo6ZOMGKbIIgN4ZZw, code: ghkj
 
 ### 4.2 Timestamp files (`rgb.txt`, `depth.txt`, `mask.txt`)
 
@@ -393,7 +397,7 @@ A headless machine needs an X server: use `ssh -X`, a VNC session, or
 
 ---
 
-## 7. Citation
+## 6. Citation
 
 If you use this code or the vectorized road-marking representation in your
 research, please cite:
@@ -415,7 +419,7 @@ Paper: <https://ieeexplore.ieee.org/document/11683558>
 
 ---
 
-## 8. Acknowledgements
+## 7. Acknowledgements
 
 This implementation builds on the excellent open-source projects below; please
 respect their licenses:
@@ -428,14 +432,14 @@ respect their licenses:
 - **Pangolin** — visualization.
 - **spdlog**, **nlohmann/json**, **popl** — utilities.
 
-## 9. License
+## 8. License
 
 GNU General Public License v3.0, inherited from Structure PLP-SLAM. See
 [LICENSE](LICENSE).
 
 ---
 
-## 10. 中文速览
+## 9. 中文速览
 
 ```bash
 # 1) 依赖
