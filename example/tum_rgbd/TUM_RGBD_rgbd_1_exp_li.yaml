@@ -1,0 +1,104 @@
+# TUM-RGBD RGBD model for 01
+
+#==============#
+# Camera Model #
+#==============#
+
+Camera.name: "TUM-RGBD RGBD 01"
+Camera.setup: "RGBD"
+Camera.model: "perspective"
+
+Camera.fx: 2.3375081946538381e+02
+Camera.fy: 2.3375081946538381e+02
+Camera.cx: 3.1310080819654763e+02
+Camera.cy: 2.0635785988047385e+02
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+Camera.fps: 50.0
+Camera.cols: 640
+Camera.rows: 400
+Camera.focal_x_baseline: 40.0
+
+Camera.color_order: "Gray"
+
+#================#
+# ORB Parameters #
+#================#
+
+Feature.max_num_keypoints: 1000
+Feature.scale_factor: 1.2
+Feature.num_levels: 8
+Feature.ini_fast_threshold: 20
+Feature.min_fast_threshold: 7
+
+#=====================#
+# Tracking Parameters #
+#=====================#
+
+depth_threshold: 20.0
+depthmap_factor: 1000.0
+
+#===========================#
+# PangolinViewer Parameters #
+#===========================#
+
+PangolinViewer.keyframe_size: 0.05
+PangolinViewer.keyframe_line_width: 1
+PangolinViewer.graph_line_width: 1
+PangolinViewer.point_size: 2
+PangolinViewer.camera_size: 0.08
+PangolinViewer.camera_line_width: 3
+PangolinViewer.viewpoint_x: 0
+PangolinViewer.viewpoint_y: -0.9
+PangolinViewer.viewpoint_z: -1.9
+PangolinViewer.viewpoint_f: 400
+PangolinViewer.c_num: 15
+
+
+#===========================#
+# Planar Object Vectorization #
+#===========================#
+
+# mask连通区域阈值
+Arrow.min_area: 700
+
+# 观测率清除
+Arrow.not_clean_line: true
+Arrow.not_clean_keyframe: true
+
+# ------三角化匹配参数------
+Arrow.use_slope_angle: true   # 是否在三角化时使用斜率对线的匹配做严格处理
+Arrow.slope_angle_thr: 20    # 斜率角度阈值
+Arrow.descriptor_dist_thr: 50 # 描述符距离约束
+Arrow.length_thr: 400          # 两帧正常线的长度约束
+Arrow.angle_thr: 20           # 两帧正常线的夹角约束
+Arrow.arrow_length_thr: 100    # 两帧箭头线的起始/终止点距离约束
+Arrow.arrow_angle_thr: 6     # 两帧箭头线的夹角约束
+Arrow.match_2d_length_percent: 0.6  # 匹配线对长度不能相差60%
+# 是否近距离观察平面线保证线的准确
+Arrow.use_plane_line_depth_threshold: true
+# 0: 平行于镜头的线的两端点深度差距
+# 1: 若符合0的距离, 最远的端点不能超过1.5m
+# 2: 若不符合0的距离, 线的端点不能大于3m
+Arrow.plane_line_depth_threshold: [0.2, 2.0, 3.5]
+
+# 矢量化参数
+Arrow.point_plane_center_thr: 3.0
+Arrow.line_angle_outlier_thr: 15
+Arrow.line_length_outlier_thr: 5
+
+# BA是否开启点/线--面约束
+Arrow.point_plane_opt: true
+Arrow.line_plane_opt: true
+Arrow.line_gamma: 1.0
+Arrow.plane_weight: 100.0
+Arrow.line_no_depth_check: true
+Arrow.use_arrow_endpoints_trimming: true
+Arrow.trimming_distance_thr: 100.0 
+Arrow.endpoint_trimming_distance_thr: 0.2
+
