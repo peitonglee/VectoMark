@@ -393,36 +393,6 @@ A headless machine needs an X server: use `ssh -X`, a VNC session, or
 
 ---
 
-## 6. Troubleshooting
-
-**`data is not aligned ... BaseFixedSizedEdge::linearizeOplus` (Eigen assert)**
-g2o was built without `-DEIGEN_DONT_ALIGN_STATICALLY`. Rebuild g2o as in §3.4 and
-reinstall.
-
-**Undefined reference to `DBoW2::Vocabulary::loadFromBinaryFile`**
-You installed the original DBoW2. Use `shinsumicco/DBoW2` (§3.5).
-
-**`cv::Exception ... connectedComponentsWithStats ... image.type() == CV_8UC1`**
-Your mask is a colour image. Export single-channel 8-bit instance masks (§4.3).
-
-**`Could not load a timestamp file from .../mask.txt`**
-The sequence directory lacks `mask.txt` (or `rgb.txt` / `depth.txt`).
-
-**`YAML::TypedBadConversion` / `InvalidNode` at start-up or during optimization**
-A key required by the code is missing from the YAML. Known case: `global_bundle_adjuster`
-reads `Arrow.trimming_dist_thr2` when a loop closure trims marking-line endpoints;
-add it (e.g. `Arrow.trimming_dist_thr2: 0.3`) if you enable loop closure with
-marking lines.
-
-**Viewer is frozen / black window on a server**
-No OpenGL display available — forward X11 or use `xvfb-run`.
-
-**`error while loading shared libraries: libPLPSLAM.so`**
-`sudo ldconfig` after installing dependencies into `/usr/local`, or set
-`LD_LIBRARY_PATH=/usr/local/lib`.
-
----
-
 ## 7. Citation
 
 If you use this code or the vectorized road-marking representation in your
